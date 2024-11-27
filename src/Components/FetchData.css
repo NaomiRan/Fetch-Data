@@ -1,29 +1,116 @@
-/* FetchData.css */
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #d7ecfc); /* Light gradient for readability */
+  margin: 0;
+  padding: 0;
+}
 
+/* Main List Container */
 .list_data_main {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  background: #ffffff; /* Bright white for better contrast */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* List Item Styles */
+.list_data {
+  padding: 15px;
+  border: 2px solid #4b88a2; /* Muted blue for contrast */
+  border-radius: 10px;
+  text-align: center;
+  background: #e7f5ff; /* Very light blue */
+  color: #2b3e50; /* Dark grayish blue for better readability */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* List Data Content */
+.list_data h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.8rem; /* Slightly larger for prominence */
+  color: #204e73;
+  font-weight: bold;
+  text-transform: capitalize; /* Capitalizes headings */
+  border-bottom: 2px solid #4b88a2; /* Adds a line for emphasis */
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Paragraph Styles for Descriptions */
+.list_data p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #2b3e50; /* Dark gray-blue for readability */
+  text-align: left; /* Align text to the left for better structure */
+  background: #ffffff; /* Add white background for text blocks */
+  padding: 10px;
+  border-radius: 5px; /* Soft corners */
+  border: 1px solid #c9d8e6; /* Subtle border for separation */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Highlight Strong Tags in Text */
+.list_data p strong {
+  color: #1d3557; /* Dark navy for bold emphasis */
+  font-weight: bold;
+}
+
+/* Hover Effect on Descriptions */
+.list_data p:hover {
+  background: #eef6ff; /* Light blue on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced depth */
+}
+
+/* Image Styling */
+.list_data img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 10px;
+  border: 2px solid #4b88a2;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.list_data img:hover {
+  transform: rotate(5deg) scale(1.1);
+  border-color: #1d3557; /* Darker border color on hover */
+}
+
+/* Heading for the Page */
+.usefetch_heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #204e73; /* Same as list heading for consistency */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .list_data_main {
+      grid-template-columns: repeat(2, 1fr);
   }
-  .usefetch_heading{
-    text-align: center;
+}
+
+@media (max-width: 480px) {
+  .list_data_main {
+      grid-template-columns: 1fr;
   }
- .list_data {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+  .list_data {
+      padding: 10px;
   }
-  
-  .list_data h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  
-  .list_data p {
-    margin: 5px 0;
-  }
-  
+}
